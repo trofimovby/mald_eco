@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Туры в ОАЭ без визы. Прямой перелет из Минска. Сезон 2026 открыт. Безопасный отдых с Ecotravel — ведущим туроператором Беларуси.">
+    <meta name="theme-color" content="#00AEEF">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ecotravel - Яркие туры в ОАЭ без визы">
+    <meta property="og:description" content="Прямой перелет из Минска. Лето круглый год. Футуристичные отели Дубая.">
+    <meta property="og:image" content="https://yoursite.com/og-image.jpg">
+
+    <title>Ecotravel - Яркие туры в ОАЭ | Без визы из Минска</title>
+
+    <!-- Preconnect для критичных доменов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Preload критичного hero-изображения -->
+    <link rel="preload" as="image" href="8.webp" fetchpriority="high">
+
+    <!-- Шрифты с font-display: swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Async загрузка Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Отложенная загрузка AOS -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Unbounded', 'sans-serif'],
+                    },
+                    colors: {
+                        ecoBlue: '#00AEEF',
+                        ecoGreen: '#8DC63F',
+                        ecoPink: '#EC008C',
+                        ecoYellow: '#FFF200',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-gradient-eco { background: linear-gradient(90deg, #00AEEF 0%, #8DC63F 100%); }
+        .text-gradient-eco { background: linear-gradient(90deg, #00AEEF, #EC008C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .border-gradient-bottom { border-bottom: 3px solid; border-image: linear-gradient(to right, #00AEEF, #8DC63F, #FFF200, #EC008C) 1; }
+        .btn-glow:hover { box-shadow: 0 0 25px rgba(0, 174, 239, 0.5); }
+        #mobile-menu { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .menu-open { transform: translateX(0) !important; }
+
+        /* Резервирование пространства для hero-изображения (предотвращение CLS) */
+        .hero-img-container {
+            aspect-ratio: 16 / 9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Оптимизация анимации для производительности */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Минимальные размеры для touch targets */
+        .touch-target {
+            min-width: 44px;
+            min-height: 44px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 relative selection:bg-ecoPink selection:text-white overflow-x-hidden pt-[90px]">
+
+    <nav class="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 h-[90px] flex items-center border-gradient-bottom" role="navigation" aria-label="Основная навигация">
+    <div class="max-w-7xl mx-auto px-6 w-full h-full flex justify-between items-center">
+
+        <a href="#" class="flex-shrink-0 hover:scale-105 transition duration-300 z-50 touch-target flex items-center" aria-label="Ecotravel - главная страница">
+            <img src="logo.png" alt="Логотип Ecotravel" class="h-10 md:h-12 w-auto object-contain" width="160" height="48">
+        </a>
+
+        <div class="hidden md:flex h-full items-center gap-8 text-[15px] font-medium text-gray-600 font-sans">
+            <a href="#why" class="hover:text-ecoBlue transition hover:-translate-y-0.5 touch-target flex items-center h-full">Преимущества</a>
+            <a href="#resorts" class="hover:text-ecoPink transition hover:-translate-y-0.5 touch-target flex items-center h-full">Курорты</a>
+            <a href="#gallery" class="hover:text-ecoPink transition hover:-translate-y-0.5 touch-target flex items-center h-full">Атмосфера</a>
+            <a href="#contact" class="hover:text-ecoGreen transition hover:-translate-y-0.5 touch-target flex items-center h-full">Запись</a>
+            <a href="#offices" class="hover:text-gray-900 transition hover:-translate-y-0.5 touch-target flex items-center h-full">Контакты</a>
+        </div>
+
+        <div class="flex items-center gap-4 md:gap-6 h-full">
+            <a href="tel:+375293657722" class="hidden lg:flex items-center text-sm font-semibold text-gray-500 hover:text-ecoBlue transition whitespace-nowrap font-mono touch-target h-full" aria-label="Позвонить по номеру +375 29 365-77-22">
+                +375 (29) 365-77-22
+            </a>
+
+            <a href="#contact" class="hidden md:flex bg-gradient-eco text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest font-display hover:scale-105 transition transform shadow-md btn-glow touch-target items-center justify-center">
+                Хочу в Дубай
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-gray-800 z-50 focus:outline-none focus:ring-2 focus:ring-ecoBlue rounded touch-target flex items-center justify-center" aria-label="Открыть меню" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] transform translate-x-full flex flex-col items-center justify-center space-y-8 md:hidden" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+        <a href="#why" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Преимущества</a>
+        <a href="#gallery" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Атмосфера</a>
+        <a href="#contact" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Запись</a>
+        <a href="#offices" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Контакты</a>
+        <a href="tel:+375293657722" class="text-xl font-mono font-bold text-ecoBlue mt-4 touch-target" aria-label="Позвонить">+375 (29) 365-77-22</a>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        <a href="tel:+375293657722" class="w-14 h-14 bg-ecoGreen rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 transition duration-300 animate-[bounce_2s_infinite] touch-target" aria-label="Позвонить нам">
+            <i class="fa-solid fa-phone text-2xl" aria-hidden="true"></i>
+        </a>
+    </div>
+<header class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+
+    <div class="absolute inset-0 z-0">
+        <img src="maldives_hero.webp"
+             alt="Мальдивы"
+             class="w-full h-full object-cover object-center brightness-[0.7]"
+             fetchpriority="high">
+
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4 max-w-6xl mx-auto flex flex-col items-center justify-center h-full">
+
+        <div class="inline-block py-2 px-6 border border-white/30 rounded-full bg-white/10 backdrop-blur-md mb-6" data-aos="zoom-in">
+            <span class="text-[#00AEEF] text-sm font-bold uppercase tracking-widest font-display">🏝 Рай на Земле</span>
+        </div>
+
+        <h1 class="text-5xl md:text-8xl lg:text-9xl font-display font-black text-white tracking-tighter mb-6 leading-[0.9] drop-shadow-2xl uppercase" data-aos="fade-up">
+            МАЛЬДИВЫ<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] via-white to-[#8DC63F]">ИСКУССТВО</span><br>
+            ОТДЫХАТЬ
+        </h1>
+
+        <div class="flex flex-wrap justify-center gap-3 md:gap-6 mb-10 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-black/30 backdrop-blur-md border border-white/20 hover:bg-white/10 transition duration-300">
+                <i class="fa-solid fa-water text-[#00AEEF] text-lg"></i>
+                <span class="text-white font-sans font-medium text-sm md:text-base">Лазурный океан</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-black/30 backdrop-blur-md border border-white/20 hover:bg-white/10 transition duration-300">
+                <i class="fa-solid fa-infinity text-[#EC008C] text-lg"></i>
+                <span class="text-white font-sans font-medium text-sm md:text-base">Полный All Inclusive</span>
+            </div>
+
+            <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-black/30 backdrop-blur-md border border-white/20 hover:bg-white/10 transition duration-300">
+                <i class="fa-solid fa-plane-arrival text-[#FFF200] text-lg"></i>
+                <span class="text-white font-sans font-medium text-sm md:text-base">Трансфер включен</span>
+            </div>
+
+        </div>
+
+        <div class="flex justify-center w-full" data-aos="fade-up" data-aos-delay="300">
+            <a href="#contact" class="inline-flex items-center justify-center px-10 py-5 text-lg md:text-xl font-black text-white transition-all duration-300 bg-[#00AEEF] rounded-full hover:bg-cyan-600 shadow-[0_0_40px_rgba(0,174,239,0.6)] hover:scale-105 transform group">
+                ХОЧУ НА МОРЕ
+                <i class="fa-solid fa-umbrella-beach ml-3 group-hover:-translate-y-1 transition-transform duration-300"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+    <section id="why" class="py-16 md:py-24 px-6 md:px-12 relative z-20">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-display font-black text-center mb-12 md:mb-16 uppercase" data-aos="fade-up">
+            Зачем лететь на <span class="text-transparent bg-clip-text bg-gradient-to-r from-ecoBlue to-ecoGreen">Мальдивы?</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <article class="bg-white p-8 rounded-[30px] shadow-xl border-b-8 border-ecoBlue hover:-translate-y-2 transition duration-300 h-full flex flex-col items-center text-center" data-aos="fade-up">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-3xl text-ecoBlue">
+                    <i class="fa-solid fa-house-flood-water"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-3">Уникальные Виллы</h3>
+                <p class="text-gray-600 leading-relaxed">Проснитесь под шум волн прямо посреди океана. Свой спуск в воду прямо из спальни.</p>
+            </article>
+
+            <article class="bg-white p-8 rounded-[30px] shadow-xl border-b-8 border-ecoGreen hover:-translate-y-2 transition duration-300 h-full flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-6 text-3xl text-ecoGreen">
+                    <i class="fa-solid fa-fish-fins"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-3">Подводный Мир</h3>
+                <p class="text-gray-600 leading-relaxed">Домашние рифы с тысячами рыбок, черепахами и мантами всего в паре метров от берега.</p>
+            </article>
+
+            <article class="bg-white p-8 rounded-[30px] shadow-xl border-b-8 border-ecoPink hover:-translate-y-2 transition duration-300 h-full flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center mb-6 text-3xl text-ecoPink">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-3">Полный Приват</h3>
+                <p class="text-gray-600 leading-relaxed">Один остров — один отель. Никаких толп, только вы, пальмы и бесконечный горизонт.</p>
+            </article>
+
+            <article class="bg-white p-8 rounded-[30px] shadow-xl border-b-8 border-ecoYellow hover:-translate-y-2 transition duration-300 h-full flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-6 text-3xl text-yellow-500">
+                    <i class="fa-regular fa-images"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-3">Контент Мечты</h3>
+                <p class="text-gray-600 leading-relaxed">Идеально белый песок и такая голубая вода, что фильтры в Инстаграм вам не понадобятся.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+    <section id="about" class="py-20 bg-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-[#00AEEF]/5 -skew-x-12 z-0 pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-[#00AEEF] uppercase mb-4">
+                ECOTRAVEL — <span class="text-[#EC008C]">ЭТО</span>
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-[#00AEEF] to-[#EC008C] mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <div data-aos="fade-right">
+                <h3 class="font-display text-2xl font-bold text-gray-800 mb-6">
+                    Ваш надежный проводник в мир путешествий
+                </h3>
+                <div class="font-sans text-gray-600 text-lg leading-relaxed space-y-4 mb-8">
+                    <p>
+                        <span class="font-bold text-[#00AEEF]">ECOTRAVEL</span> — сеть туристических агентств и визовых центров с безупречной репутацией. Мы работаем прозрачно, соблюдая все законодательные нормы Республики Беларусь.
+                    </p>
+                    <p>
+                        Забудьте о рисках и «фирмах-однодневках». Наш опыт и партнерские связи с ведущими туроператорами гарантируют безопасность и качество вашего отдыха с момента бронирования до возвращения домой.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-[40px] p-6 md:p-10 shadow-lg border-2 border-[#00AEEF]/10 hover:border-[#00AEEF]/40 transition duration-300 group mt-6 flex justify-center items-center w-full md:w-auto md:inline-flex">
+                    <img src="logo.png"
+                         alt="EcoTravel Official Logo"
+                         class="h-16 md:h-24 w-auto object-contain block transition duration-300 group-hover:scale-105">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+
+                <div class="bg-white rounded-[30px] p-6 shadow-xl border border-gray-100 hover:-translate-y-2 transition duration-300 text-center group">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-calendar-check text-3xl text-[#8DC63F] group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="font-display font-black text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#00AEEF] to-[#EC008C] mb-1">
+                        10+
+                    </div>
+                    <p class="font-sans text-sm font-bold text-gray-600">Лет на рынке</p>
+                </div>
+
+                <div class="bg-white rounded-[30px] p-6 shadow-xl border border-gray-100 hover:-translate-y-2 transition duration-300 text-center group">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-users text-3xl text-[#00AEEF] group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="font-display font-black text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#00AEEF] to-[#EC008C] mb-1">
+                        15k+
+                    </div>
+                    <p class="font-sans text-sm font-bold text-gray-600">Довольных туристов</p>
+                </div>
+
+                <div class="bg-white rounded-[30px] p-6 shadow-xl border border-gray-100 hover:-translate-y-2 transition duration-300 text-center group">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-headset text-3xl text-[#EC008C] group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="font-display font-black text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#00AEEF] to-[#EC008C] mb-1">
+                        24/7
+                    </div>
+                    <p class="font-sans text-sm font-bold text-gray-600">Поддержка в туре</p>
+                </div>
+
+                <div class="bg-white rounded-[30px] p-6 shadow-xl border border-gray-100 hover:-translate-y-2 transition duration-300 text-center group">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-file-shield text-3xl text-[#FFF200] drop-shadow-sm group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="font-display font-black text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#00AEEF] to-[#EC008C] mb-1">
+                        100%
+                    </div>
+                    <p class="font-sans text-sm font-bold text-gray-600">Официальная гарантия</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="resorts" class="py-16 md:py-24 px-4 md:px-6 relative z-20 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl md:text-6xl font-display font-black text-center mb-4 uppercase" data-aos="fade-up">
+            ВАШИ <span class="text-gradient-eco">ВПЕЧАТЛЕНИЯ</span>
+        </h2>
+        <p class="text-center text-gray-600 text-lg md:text-xl mb-12 md:mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            Мальдивы — это не просто пляж. Это коллекция моментов, которые останутся с вами навсегда.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[180px] md:auto-rows-[280px]">
+
+            <article class="col-span-2 row-span-2 relative rounded-[30px] overflow-hidden shadow-lg group cursor-pointer" data-aos="fade-up">
+                <img src="villa.webp" alt="Водная вилла" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-6 md:p-8 text-white">
+                    <h3 class="text-3xl md:text-5xl font-display font-black mb-2">Water Villa</h3>
+                    <p class="text-white/90 text-sm md:text-lg font-medium leading-tight">Ваш личный дворец над океаном с бассейном</p>
+                </div>
+            </article>
+
+            <article class="col-span-1 row-span-1 relative rounded-[30px] overflow-hidden shadow-lg group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <img src="underwater.webp" alt="Подводный ресторан" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            </article>
+
+            <article class="col-span-1 row-span-1 relative rounded-[30px] overflow-hidden shadow-lg group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                <img src="seaplane.webp" alt="Гидросамолет" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-4 md:p-6 text-white">
+                    <h3 class="text-lg md:text-2xl font-display font-bold">Полёт</h3>
+                    <p class="text-xs md:text-sm opacity-90 hidden md:block">Вид на атоллы сверху</p>
+                </div>
+            </article>
+
+            <article class="col-span-1 row-span-1 relative rounded-[30px] overflow-hidden shadow-lg group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                <img src="vaadhoo.webp" alt="Светящийся пляж" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-4 md:p-6 text-white">
+                    <h3 class="text-lg md:text-2xl font-display font-bold">Магия</h3>
+                    <p class="text-xs md:text-sm opacity-90 hidden md:block">Светящийся планктон</p>
+                </div>
+            </article>
+
+            <article class="col-span-1 row-span-1 relative rounded-[30px] overflow-hidden shadow-lg group cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                <img src="snorkeling.webp" alt="Снорклинг" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-4 md:p-6 text-white">
+                    <h3 class="text-lg md:text-2xl font-display font-bold">Рифы</h3>
+                    <p class="text-xs md:text-sm opacity-90 hidden md:block">Плавание с черепахами</p>
+                </div>
+            </article>
+
+            <article class="col-span-2 md:col-span-4 row-span-1 relative rounded-[30px] overflow-hidden shadow-lg group cursor-pointer h-[200px] md:h-auto" data-aos="fade-up" data-aos-delay="500">
+                <img src="dinner.webp" alt="Ужин на закате" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 md:p-8 text-white flex flex-col md:flex-row md:items-end justify-between w-full">
+                    <div>
+                        <h3 class="text-2xl md:text-4xl font-display font-bold mb-1">Романтика Заката</h3>
+                        <p class="text-white/90 text-sm md:text-lg">Ужин при свечах на необитаемой песчаной косе</p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+    <section id="reviews" class="py-20 bg-gray-50 overflow-hidden">
+    <div class="container mx-auto px-4">
+
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="font-display text-3xl md:text-5xl font-bold text-[#00AEEF] uppercase mb-4">
+                Что говорят <span class="text-[#EC008C]">Туристы</span>
+            </h2>
+            <p class="font-sans text-gray-600 text-lg max-w-2xl mx-auto">
+                Эмоции тех, кто уже вернулся из рая.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-[30px] p-8 shadow-xl hover:-translate-y-2 transition duration-300 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-[#EC008C]/10 flex items-center justify-center text-[#EC008C] font-bold font-display text-lg">
+                        В
+                    </div>
+                    <div>
+                        <h4 class="font-display font-bold text-gray-800 text-sm">Виктория М.</h4>
+                        <span class="font-sans text-xs text-gray-400">14 фев 2025</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-1 mb-4 text-[#FFF200]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div class="font-sans text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                    «Это был лучший медовый месяц! Мы жили в вилле на воде, и это просто космос — просыпаешься и сразу ныряешь к рыбкам. Спасибо менеджеру, что уговорила взять именно этот отель с хорошим рифом!»
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 flex items-center gap-2 text-gray-400 text-xs font-sans uppercase tracking-wider">
+                    <i class="fa-brands fa-instagram text-xl bg-clip-text text-transparent bg-gradient-to-tr from-[#FFDC80] via-[#F56040] to-[#833AB4]"></i>
+                    Отзыв из Instagram
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[30px] p-8 shadow-xl hover:-translate-y-2 transition duration-300 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-[#00AEEF]/10 flex items-center justify-center text-[#00AEEF] font-bold font-display text-lg">
+                        А
+                    </div>
+                    <div>
+                        <h4 class="font-display font-bold text-gray-800 text-sm">Андрей П.</h4>
+                        <span class="font-sans text-xs text-gray-400">10 янв 2025</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-1 mb-4 text-[#FFF200]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div class="font-sans text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                    «Летали с двумя детьми, очень переживали за перелет и гидросамолет. Но организация EcoTravel на высоте! Встретили, посадили, дети от полета над островами в восторге. Отдохнули на 100%.»
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 flex items-center gap-2 text-gray-400 text-xs font-sans uppercase tracking-wider">
+                    <i class="fa-brands fa-google text-xl text-red-500"></i>
+                    Отзыв из Google Maps
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[30px] p-8 shadow-xl hover:-translate-y-2 transition duration-300 flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-[#8DC63F]/10 flex items-center justify-center text-[#8DC63F] font-bold font-display text-lg">
+                        К
+                    </div>
+                    <div>
+                        <h4 class="font-display font-bold text-gray-800 text-sm">Кристина С.</h4>
+                        <span class="font-sans text-xs text-gray-400">05 марта 2025</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-1 mb-4 text-[#FFF200]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div class="font-sans text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                    «Цвет воды нереальный, как на фотошопе! Очень рада, что послушала совета взять "Все включено" — на острове цены высокие, а так мы ни в чем себе не отказывали. Коктейли, лобстеры — всё супер.»
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 flex items-center gap-2 text-gray-400 text-xs font-sans uppercase tracking-wider">
+                    <i class="fa-brands fa-instagram text-xl bg-clip-text text-transparent bg-gradient-to-tr from-[#FFDC80] via-[#F56040] to-[#833AB4]"></i>
+                    Отзыв из Instagram
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <section id="gallery" class="py-10 md:py-16 px-4 md:px-12 relative z-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-display font-black mb-8 md:mb-12 flex items-center gap-4" data-aos="fade-right">
+            <div class="w-4 h-12 bg-gradient-eco rounded-full" aria-hidden="true"></div>
+            АТМОСФЕРА
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 auto-rows-fr md:h-[600px]">
+
+            <figure class="md:col-span-2 md:row-span-2 rounded-[30px] overflow-hidden relative group shadow-lg h-[300px] md:h-auto" data-aos="zoom-in">
+                <img src="beach_relax.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Пляжный отдых" loading="lazy">
+
+                <figcaption class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-2xl border border-white/50 flex items-center gap-3 transition-transform duration-300 group-hover:-translate-y-1">
+                    <span class="text-2xl">🍹</span>
+                    <span class="font-display font-bold text-gray-900 text-lg tracking-wide">Полный Релакс</span>
+                </figcaption>
+            </figure>
+
+            <figure class="md:col-span-1 md:row-span-1 rounded-[30px] overflow-hidden relative group shadow-lg h-[250px] md:h-auto" data-aos="zoom-in" data-aos-delay="100">
+                <img src="spa.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Спа процедуры" loading="lazy">
+            </figure>
+
+            <figure class="md:col-span-1 md:row-span-1 rounded-[30px] overflow-hidden relative group shadow-lg h-[250px] md:h-auto" data-aos="zoom-in" data-aos-delay="200">
+                <img src="maldives_hero.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Вид на лагуну" loading="lazy">
+            </figure>
+
+            <figure class="md:col-span-2 md:row-span-1 rounded-[30px] overflow-hidden relative group shadow-lg h-[200px] md:h-auto" data-aos="zoom-in" data-aos-delay="300">
+                <img src="snorkeling.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Подводный мир" loading="lazy">
+
+                <figcaption class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-2xl border border-white/50 flex items-center gap-3 transition-transform duration-300 group-hover:-translate-y-1">
+                    <span class="text-xl">🐢</span>
+                    <span class="font-display font-bold text-gray-900 text-lg tracking-wide">Живой океан</span>
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+</section>
+   <section class="py-16 md:py-24 px-6 relative z-20 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-display font-black text-center mb-12 md:mb-16 uppercase" data-aos="fade-up">
+            Ваш отдых <span class="text-ecoBlue">Безупречен</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" data-aos="fade-up" data-aos-delay="100">
+
+            <details class="bg-gray-50 border border-gray-100 p-6 md:p-8 rounded-[30px] shadow-sm hover:border-ecoBlue transition duration-300 cursor-pointer group">
+                <summary class="flex justify-between items-center mb-2 list-none touch-target">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-ecoBlue flex-shrink-0" aria-hidden="true">
+                            <i class="fa-solid fa-plane-up"></i>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold group-hover:text-ecoBlue transition">Как добраться до острова?</h3>
+                    </div>
+                    <i class="fa-solid fa-plus text-gray-400 group-hover:text-ecoBlue transition-transform duration-300 text-xl group-open:rotate-45" aria-hidden="true"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 leading-relaxed pl-0 md:pl-14">
+                    Это часть приключения! В зависимости от отеля, вас ждет скоростной катер (15-40 мин) или живописный полет на гидросамолете. Мы заранее организуем весь трансфер, вас встретят в аэропорту с табличкой.
+                </p>
+            </details>
+
+            <details class="bg-gray-50 border border-gray-100 p-6 md:p-8 rounded-[30px] shadow-sm hover:border-ecoPink transition duration-300 cursor-pointer group">
+                <summary class="flex justify-between items-center mb-2 list-none touch-target">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-ecoPink flex-shrink-0" aria-hidden="true">
+                            <i class="fa-solid fa-martini-glass-citrus"></i>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold group-hover:text-ecoPink transition">А как там с алкоголем?</h3>
+                    </div>
+                    <i class="fa-solid fa-plus text-gray-400 group-hover:text-ecoPink transition-transform duration-300 text-xl group-open:rotate-45" aria-hidden="true"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 leading-relaxed pl-0 md:pl-14">
+                    На островах-резортах (отелях) алкоголь разрешен и доступен в барах и ресторанах без ограничений. Запрет действует только на локальных островах, где живут местные жители.
+                </p>
+            </details>
+
+            <details class="bg-gray-50 border border-gray-100 p-6 md:p-8 rounded-[30px] shadow-sm hover:border-ecoYellow transition duration-300 cursor-pointer group">
+                <summary class="flex justify-between items-center mb-2 list-none touch-target">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 flex-shrink-0" aria-hidden="true">
+                            <i class="fa-solid fa-masks-theater"></i>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold group-hover:text-yellow-600 transition">Там не скучно?</h3>
+                    </div>
+                    <i class="fa-solid fa-plus text-gray-400 group-hover:text-yellow-600 transition-transform duration-300 text-xl group-open:rotate-45" aria-hidden="true"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 leading-relaxed pl-0 md:pl-14">
+                    Миф! Снорклинг, дайвинг, рыбалка на закате, спа-центры, кинотеатры под открытым небом, водные лыжи и экскурсии к дельфинам. Дни пролетают незаметно.
+                </p>
+            </details>
+
+            <details class="bg-gray-50 border border-gray-100 p-6 md:p-8 rounded-[30px] shadow-sm hover:border-ecoGreen transition duration-300 cursor-pointer group">
+                <summary class="flex justify-between items-center mb-2 list-none touch-target">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-ecoGreen flex-shrink-0" aria-hidden="true">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold group-hover:text-ecoGreen transition">Что с питанием?</h3>
+                    </div>
+                    <i class="fa-solid fa-plus text-gray-400 group-hover:text-ecoGreen transition-transform duration-300 text-xl group-open:rotate-45" aria-hidden="true"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 leading-relaxed pl-0 md:pl-14">
+                    Мы рекомендуем брать "Все включено" (All Inclusive), чтобы ни о чем не думать. Кухня в отелях высочайшего уровня: свежайшие морепродукты, фрукты, европейские и азиатские блюда.
+                </p>
+            </details>
+
+        </div>
+    </div>
+</section>
+    <section id="contact" class="py-20 bg-gray-900 relative overflow-hidden">
+
+    <div class="absolute top-0 left-0 w-96 h-96 bg-[#00AEEF]/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#EC008C]/20 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4 uppercase">
+                    Свяжитесь с <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00AEEF] to-[#EC008C]">Нами</span>
+                </h2>
+                <p class="font-sans text-gray-400 text-lg">
+                    Выберите удобный способ, и мы ответим в течение 15 минут.
+                </p>
+            </div>
+
+            <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[40px] p-8 md:p-12 shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+
+                <form id="contactForm" class="space-y-6">
+
+                    <div>
+                        <label class="block font-display text-sm text-gray-400 mb-2 ml-4">Как к вам обращаться?</label>
+                        <input type="text" name="name" placeholder="Ваше Имя" required
+       class="w-full bg-black/20 border border-white/10 rounded-full px-8 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#00AEEF] transition duration-300 font-sans">
+                    </div>
+
+                    <div class="bg-black/20 p-1 rounded-full grid grid-cols-2 relative">
+                        <button type="button" onclick="switchContactMethod('call')" id="tabCall"
+                                class="rounded-full py-3 font-display font-bold text-sm transition-all duration-300 bg-white text-gray-900 shadow-lg">
+                            <i class="fa-solid fa-phone mr-2"></i> Перезвоните мне
+                        </button>
+                        <button type="button" onclick="switchContactMethod('write')" id="tabWrite"
+                                class="rounded-full py-3 font-display font-bold text-sm transition-all duration-300 text-gray-400 hover:text-white">
+                            <i class="fa-solid fa-comment-dots mr-2"></i> Напишите мне
+                        </button>
+                    </div>
+
+                    <div id="blockCall" class="transition-all duration-300">
+                        <label class="block font-display text-sm text-gray-400 mb-2 ml-4">Номер телефона</label>
+                        <input type="tel" name="phone" placeholder="+375 (XX) XXX-XX-XX"
+                               class="w-full bg-black/20 border border-white/10 rounded-full px-8 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#00AEEF] transition duration-300 font-sans">
+                    </div>
+
+                    <div id="blockWrite" class="hidden transition-all duration-300">
+                        <label class="block font-display text-sm text-gray-400 mb-4 ml-4">Где вам удобно общаться?</label>
+
+                        <div class="grid grid-cols-3 gap-4">
+                            <button type="button" onclick="selectMessenger('telegram')" id="btnTelegram"
+                                    class="messenger-btn group flex flex-col items-center justify-center p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-[#229ED9]/10 hover:border-[#229ED9] transition duration-300">
+                                <i class="fa-brands fa-telegram text-3xl text-gray-400 group-hover:text-[#229ED9] transition duration-300 mb-2"></i>
+                                <span class="text-xs font-sans text-gray-400 group-hover:text-white">Telegram</span>
+                            </button>
+
+                            <button type="button" onclick="selectMessenger('whatsapp')" id="btnWhatsapp"
+                                    class="messenger-btn group flex flex-col items-center justify-center p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-[#25D366]/10 hover:border-[#25D366] transition duration-300">
+                                <i class="fa-brands fa-whatsapp text-3xl text-gray-400 group-hover:text-[#25D366] transition duration-300 mb-2"></i>
+                                <span class="text-xs font-sans text-gray-400 group-hover:text-white">WhatsApp</span>
+                            </button>
+
+                            <button type="button" onclick="selectMessenger('viber')" id="btnViber"
+                                    class="messenger-btn group flex flex-col items-center justify-center p-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-[#7360F2]/10 hover:border-[#7360F2] transition duration-300">
+                                <i class="fa-brands fa-viber text-3xl text-gray-400 group-hover:text-[#7360F2] transition duration-300 mb-2"></i>
+                                <span class="text-xs font-sans text-gray-400 group-hover:text-white">Viber</span>
+                            </button>
+                        </div>
+
+                        <input type="text" name="messenger_contact" placeholder="Ваш номер или никнейм"
+                               class="w-full mt-4 bg-black/20 border border-white/10 rounded-full px-8 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#EC008C] transition duration-300 font-sans">
+                    </div>
+
+                    <input type="hidden" name="contact_method_type" id="inputMethodType" value="phone">
+                    <input type="hidden" name="messenger_app" id="inputMessengerApp" value="">
+
+                    <button type="submit" class="w-full py-5 rounded-full bg-gradient-to-r from-[#00AEEF] to-[#EC008C] font-display font-bold text-white text-lg hover:shadow-[0_0_30px_rgba(0,174,239,0.5)] hover:scale-[1.02] transition duration-300">
+                        Отправить заявку
+                    </button>
+
+                    <p class="text-center text-gray-500 text-xs font-sans mt-4">
+                        Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function switchContactMethod(method) {
+        const tabCall = document.getElementById('tabCall');
+        const tabWrite = document.getElementById('tabWrite');
+        const blockCall = document.getElementById('blockCall');
+        const blockWrite = document.getElementById('blockWrite');
+        const inputMethod = document.getElementById('inputMethodType');
+
+        if (method === 'call') {
+            // Style Tabs
+            tabCall.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
+            tabCall.classList.remove('text-gray-400', 'hover:text-white');
+
+            tabWrite.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
+            tabWrite.classList.add('text-gray-400', 'hover:text-white');
+
+            // Toggle Blocks
+            blockCall.classList.remove('hidden');
+            blockWrite.classList.add('hidden');
+
+            // Set Value
+            inputMethod.value = 'phone';
+        } else {
+            // Style Tabs
+            tabWrite.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
+            tabWrite.classList.remove('text-gray-400', 'hover:text-white');
+
+            tabCall.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
+            tabCall.classList.add('text-gray-400', 'hover:text-white');
+
+            // Toggle Blocks
+            blockWrite.classList.remove('hidden');
+            blockCall.classList.add('hidden');
+
+            // Set Value
+            inputMethod.value = 'messenger';
+        }
+    }
+
+    function selectMessenger(app) {
+        // Reset all buttons
+        document.querySelectorAll('.messenger-btn').forEach(btn => {
+            btn.classList.remove('bg-white/20', 'border-white/50', 'ring-2', 'ring-white/50');
+            btn.classList.add('bg-white/5', 'border-white/10');
+            // Reset icon colors inside
+            const icon = btn.querySelector('i');
+            icon.classList.remove('text-[#229ED9]', 'text-[#25D366]', 'text-[#7360F2]');
+            icon.classList.add('text-gray-400');
+        });
+
+        // Set hidden input
+        document.getElementById('inputMessengerApp').value = app;
+
+        // Highlight selected
+        const selectedBtn = document.getElementById('btn' + app.charAt(0).toUpperCase() + app.slice(1));
+        selectedBtn.classList.remove('bg-white/5', 'border-white/10');
+        selectedBtn.classList.add('bg-white/20', 'border-white/50'); // Active background
+
+        // Colorize Icon specifically
+        const icon = selectedBtn.querySelector('i');
+        icon.classList.remove('text-gray-400');
+
+        if(app === 'telegram') icon.classList.add('text-[#229ED9]');
+        if(app === 'whatsapp') icon.classList.add('text-[#25D366]');
+        if(app === 'viber') icon.classList.add('text-[#7360F2]');
+    }
+</script>
+
+    <footer id="offices" class="bg-white py-16 md:py-24 px-6 border-t border-gray-100 relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-ecoBlue/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-ecoPink/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-3xl md:text-5xl font-display font-black text-center mb-12 md:mb-16 text-gray-900">НАШИ ОФИСЫ</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
+                <article class="bg-gray-50 p-8 md:p-10 rounded-[30px] border border-gray-100 text-center hover:shadow-xl hover:bg-white hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-16 h-16 bg-white text-gray-900 shadow-md rounded-full flex items-center justify-center mb-6 text-2xl mx-auto group-hover:scale-110 transition duration-300" aria-hidden="true">
+                        <i class="fa-solid fa-location-dot text-ecoBlue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Минск</h3>
+                    <p class="text-gray-500 mb-6 pb-6 border-b border-gray-200">ул. Комсомольская, 14</p>
+                    <div class="text-gray-900 font-bold font-mono text-base md:text-lg space-y-1">
+                        <a href="tel:+375293657722" class="block hover:text-ecoBlue transition touch-target">+375 (29) 365-77-22</a>
+                        <a href="tel:+375333657722" class="block hover:text-ecoBlue transition touch-target">+375 (33) 365-77-22</a>
+                    </div>
+                </article>
+
+                <article class="bg-gray-50 p-8 md:p-10 rounded-[30px] border border-gray-100 text-center hover:shadow-xl hover:bg-white hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-16 h-16 bg-white text-gray-900 shadow-md rounded-full flex items-center justify-center mb-6 text-2xl mx-auto group-hover:scale-110 transition duration-300" aria-hidden="true">
+                        <i class="fa-solid fa-location-dot text-ecoGreen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Минск</h3>
+                    <p class="text-gray-500 mb-6 pb-6 border-b border-gray-200">пр-т Машерова, 17</p>
+                    <div class="text-gray-900 font-bold font-mono text-base md:text-lg space-y-1">
+                        <a href="tel:+375293558833" class="block hover:text-ecoGreen transition touch-target">+375 (29) 355-88-33</a>
+                        <a href="tel:+375333558833" class="block hover:text-ecoGreen transition touch-target">+375 (33) 355-88-33</a>
+                    </div>
+                </article>
+
+                <article class="bg-gray-50 p-8 md:p-10 rounded-[30px] border border-gray-100 text-center hover:shadow-xl hover:bg-white hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-16 h-16 bg-white text-gray-900 shadow-md rounded-full flex items-center justify-center mb-6 text-2xl mx-auto group-hover:scale-110 transition duration-300" aria-hidden="true">
+                        <i class="fa-solid fa-location-dot text-ecoPink"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Минск</h3>
+                    <p class="text-gray-500 mb-6 pb-6 border-b border-gray-200">пр-т Независимости, 55</p>
+                    <div class="text-gray-900 font-bold font-mono text-base md:text-lg space-y-1">
+                        <a href="tel:+375296866677" class="block hover:text-ecoPink transition touch-target">+375 (29) 686-66-77</a>
+                        <a href="tel:+375336866677" class="block hover:text-ecoPink transition touch-target">+375 (33) 686-66-77</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center pt-10 border-t border-gray-200">
+                <p class="text-gray-400 font-display text-sm tracking-widest uppercase mb-8">Присоединяйтесь к нам</p>
+
+                <div class="flex justify-center gap-6 mb-10">
+
+                    <a href="https://instagram.com/ecotravelby" target="_blank"
+                       class="w-16 h-16 rounded-full flex items-center justify-center text-white bg-gradient-to-tr from-[#FFDC80] via-[#F56040] to-[#833AB4] shadow-lg shadow-pink-500/30 hover:scale-110 hover:shadow-pink-500/60 transition-all duration-300 touch-target group">
+                        <i class="fa-brands fa-instagram text-3xl group-hover:rotate-12 transition-transform duration-300"></i>
+                    </a>
+
+                    <a href="https://t.me/ecotravel_by" target="_blank"
+                       class="w-16 h-16 rounded-full flex items-center justify-center text-white bg-[#229ED9] shadow-lg shadow-blue-400/30 hover:scale-110 hover:shadow-blue-400/60 transition-all duration-300 touch-target group">
+                        <i class="fa-brands fa-telegram text-3xl group-hover:-translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
+                    </a>
+
+                    <a href="viber://chat?number=%2B375293657722"
+                       class="w-16 h-16 rounded-full flex items-center justify-center text-white bg-[#7360F2] shadow-lg shadow-purple-500/30 hover:scale-110 hover:shadow-purple-500/60 transition-all duration-300 touch-target group">
+                        <i class="fa-brands fa-viber text-3xl group-hover:animate-pulse"></i>
+                    </a>
+
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <img src="logo.png" alt="Логотип Ecotravel" class="h-12 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500 mb-4">
+                    <p class="text-gray-400 text-sm">© 2026 Ecotravel. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+        // ==============================================================
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQbokvP4yEwJQQeVeJ-y4FnEXG0Pxt0HAf_SRTKB2e5B6gULfSSRGxYa5UkQLgNLH1/exec';
+        // ==============================================================
+
+        // --- Инициализация (AOS и Меню) ---
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof AOS !== 'undefined') AOS.init({ duration: 800, offset: 50, once: true });
+        });
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('menu-open');
+                const icon = menuBtn.querySelector('i');
+                if(icon) icon.classList.toggle('fa-xmark');
+                if(icon) icon.classList.toggle('fa-bars');
+            });
+        }
+        function closeMenu() {
+            if(mobileMenu) mobileMenu.classList.remove('menu-open');
+        }
+
+        // --- Логика переключения вкладок формы ---
+        function switchContactMethod(method) {
+            const tabCall = document.getElementById('tabCall');
+            const tabWrite = document.getElementById('tabWrite');
+            const blockCall = document.getElementById('blockCall');
+            const blockWrite = document.getElementById('blockWrite');
+            const inputMethod = document.getElementById('inputMethodType');
+
+            if (method === 'call') {
+                tabCall.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
+                tabCall.classList.remove('text-gray-400', 'hover:text-white');
+                tabWrite.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
+                tabWrite.classList.add('text-gray-400', 'hover:text-white');
+                blockCall.classList.remove('hidden');
+                blockWrite.classList.add('hidden');
+                inputMethod.value = 'phone';
+            } else {
+                tabWrite.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
+                tabWrite.classList.remove('text-gray-400', 'hover:text-white');
+                tabCall.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
+                tabCall.classList.add('text-gray-400', 'hover:text-white');
+                blockWrite.classList.remove('hidden');
+                blockCall.classList.add('hidden');
+                inputMethod.value = 'messenger';
+            }
+        }
+
+        function selectMessenger(app) {
+            document.querySelectorAll('.messenger-btn').forEach(btn => {
+                btn.classList.remove('bg-white/20', 'border-white/50', 'ring-2', 'ring-white/50');
+                btn.classList.add('bg-white/5', 'border-white/10');
+                const icon = btn.querySelector('i');
+                icon.classList.remove('text-[#229ED9]', 'text-[#25D366]', 'text-[#7360F2]');
+                icon.classList.add('text-gray-400');
+            });
+            document.getElementById('inputMessengerApp').value = app;
+            const selectedBtn = document.getElementById('btn' + app.charAt(0).toUpperCase() + app.slice(1));
+            selectedBtn.classList.remove('bg-white/5', 'border-white/10');
+            selectedBtn.classList.add('bg-white/20', 'border-white/50');
+            const icon = selectedBtn.querySelector('i');
+            icon.classList.remove('text-gray-400');
+            if(app === 'telegram') icon.classList.add('text-[#229ED9]');
+            if(app === 'whatsapp') icon.classList.add('text-[#25D366]');
+            if(app === 'viber') icon.classList.add('text-[#7360F2]');
+        }
+
+        // === ОТПРАВКА ФОРМЫ С НОВОЙ ЛОГИКОЙ ===
+        const contactForm = document.querySelector('form');
+
+        if (contactForm) {
+            // Ограничение ввода для телефона (только цифры)
+            const phoneField = contactForm.querySelector('input[name="phone"]');
+            if(phoneField) {
+                phoneField.addEventListener('input', function(e) {
+                    this.value = this.value.replace(/[^0-9+\-()\s]/g, '');
+                });
+            }
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const nameInput = contactForm.querySelector('input[name="name"]');
+                const phoneInput = contactForm.querySelector('input[name="phone"]');
+
+                // Новые поля
+                const methodInput = document.getElementById('inputMethodType');
+                const messengerAppInput = document.getElementById('inputMessengerApp');
+                const messengerContactInput = contactForm.querySelector('input[name="messenger_contact"]');
+
+                let contactData = '';
+
+                // ВАЛИДАЦИЯ
+                if (methodInput.value === 'phone') {
+                    // Логика для звонка
+                    let phoneValue = phoneInput.value;
+                    let cleanPhone = phoneValue.replace(/[^0-9+]/g, '');
+                    if (cleanPhone.startsWith('80')) cleanPhone = '+375' + cleanPhone.substring(2);
+                    if (cleanPhone.startsWith('375')) cleanPhone = '+' + cleanPhone;
+
+                    if (cleanPhone.replace(/[^0-9]/g, '').length < 7) {
+                        alert('Пожалуйста, введите корректный номер телефона.');
+                        return;
+                    }
+                    contactData = cleanPhone;
+                } else {
+                    // Логика для мессенджера
+                    if (!messengerContactInput.value.trim()) {
+                        alert('Пожалуйста, укажите ваш никнейм или номер для связи.');
+                        return;
+                    }
+                    contactData = messengerContactInput.value;
+                    if(!messengerAppInput.value) messengerAppInput.value = 'telegram'; // Дефолт
+                }
+
+                // Визуальный эффект
+                const originalBtnText = submitBtn.innerText;
+                submitBtn.innerText = 'ОТПРАВЛЯЕМ...';
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+                const formData = new FormData();
+                formData.append("name", nameInput.value);
+                formData.append("phone", contactData); // Сюда кладем основной контакт
+                formData.append("source", "ОАЭ");
+
+                // Доп поля для Google Script -> U-ON
+                formData.append("contact_method_type", methodInput.value);
+                formData.append("messenger_app", messengerAppInput.value);
+                formData.append("messenger_contact", messengerContactInput.value);
+
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: "POST",
+                    body: formData,
+                    mode: 'no-cors'
+                })
+                .then(() => {
+                    alert('Спасибо! Ваша заявка принята.');
+                    contactForm.reset();
+                    switchContactMethod('call');
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                    alert('Ошибка соединения.');
+                })
+                .finally(() => {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
