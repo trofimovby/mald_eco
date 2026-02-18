@@ -12,7 +12,8 @@
     <meta property="og:description" content="Прямой перелет из Минска. Лето круглый год. Футуристичные отели Дубая.">
     <meta property="og:image" content="https://yoursite.com/og-image.jpg">
 
-    <title>Ecotravel - Яркие туры в ОАЭ | Без визы из Минска</title>
+    <title>Ecotravel - Мальдивы </title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%238DC63F' transform='rotate(25 256 256)' d='M256 32C114.6 32 0 125.1 0 240h240v240h32V240h240C512 125.1 397.4 32 256 32z'/></svg>" type="image/svg+xml">
 
     <!-- Preconnect для критичных доменов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,7 +89,7 @@
 </head>
 <body class="bg-white text-gray-900 relative selection:bg-ecoPink selection:text-white overflow-x-hidden pt-[90px]">
 
-    <nav class="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 h-[90px] flex items-center border-gradient-bottom" role="navigation" aria-label="Основная навигация">
+<nav class="fixed top-0 left-0 w-full z-[100] bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 h-[90px] flex items-center border-gradient-bottom" role="navigation" aria-label="Основная навигация">
     <div class="max-w-7xl mx-auto px-6 w-full h-full flex justify-between items-center">
 
         <a href="#" class="flex-shrink-0 hover:scale-105 transition duration-300 z-50 touch-target flex items-center" aria-label="Ecotravel - главная страница">
@@ -97,9 +98,14 @@
 
         <div class="hidden md:flex h-full items-center gap-8 text-[15px] font-medium text-gray-600 font-sans">
             <a href="#why" class="hover:text-ecoBlue transition hover:-translate-y-0.5 touch-target flex items-center h-full">Преимущества</a>
-            <a href="#resorts" class="hover:text-ecoPink transition hover:-translate-y-0.5 touch-target flex items-center h-full">Курорты</a>
+            <a href="#resorts" class="hover:text-ecoPink transition hover:-translate-y-0.5 touch-target flex items-center h-full">Атоллы</a>
             <a href="#gallery" class="hover:text-ecoPink transition hover:-translate-y-0.5 touch-target flex items-center h-full">Атмосфера</a>
-            <a href="#contact" class="hover:text-ecoGreen transition hover:-translate-y-0.5 touch-target flex items-center h-full">Запись</a>
+
+            <a href="#contact" class="text-ecoGreen font-bold hover:text-green-600 transition hover:-translate-y-0.5 touch-target flex items-center gap-2 h-full">
+                <i class="fa-regular fa-paper-plane"></i>
+                Подбор тура
+            </a>
+
             <a href="#offices" class="hover:text-gray-900 transition hover:-translate-y-0.5 touch-target flex items-center h-full">Контакты</a>
         </div>
 
@@ -109,7 +115,7 @@
             </a>
 
             <a href="#contact" class="hidden md:flex bg-gradient-eco text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest font-display hover:scale-105 transition transform shadow-md btn-glow touch-target items-center justify-center">
-                Хочу на море
+                Хочу на Мальдивы
             </a>
 
             <button id="menu-btn" class="md:hidden text-2xl text-gray-800 z-50 focus:outline-none focus:ring-2 focus:ring-ecoBlue rounded touch-target flex items-center justify-center" aria-label="Открыть меню" aria-expanded="false">
@@ -119,14 +125,24 @@
     </div>
 </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] transform translate-x-full flex flex-col items-center justify-center space-y-8 md:hidden" role="dialog" aria-modal="true" aria-label="Мобильное меню">
-        <a href="#why" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Преимущества</a>
-        <a href="#gallery" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Атмосфера</a>
-        <a href="#contact" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Запись</a>
-        <a href="#offices" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Контакты</a>
-        <a href="tel:+375293657722" class="text-xl font-mono font-bold text-ecoBlue mt-4 touch-target" aria-label="Позвонить">+375 (29) 365-77-22</a>
-    </div>
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[90] transform translate-x-full flex flex-col items-center justify-center space-y-8 md:hidden" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+    <a href="#why" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Преимущества</a>
+    <a href="#resorts" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Атоллы</a>
+    <a href="#gallery" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Атмосфера</a>
 
+    <a href="#contact" class="text-2xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-ecoBlue to-ecoGreen touch-target" onclick="closeMenu()">
+        ПОДБОР ТУРА
+    </a>
+
+    <a href="#offices" class="text-2xl font-display font-bold text-gray-800 touch-target" onclick="closeMenu()">Контакты</a>
+    <a href="tel:+375293657722" class="text-xl font-mono font-bold text-ecoBlue mt-4 touch-target" aria-label="Позвонить">+375 (29) 365-77-22</a>
+</div>
+
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <a href="tel:+375293657722" class="w-14 h-14 bg-ecoGreen rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 transition duration-300 animate-[bounce_2s_infinite] touch-target" aria-label="Позвонить нам">
+        <i class="fa-solid fa-phone text-2xl" aria-hidden="true"></i>
+    </a>
+</div>
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         <a href="tel:+375293657722" class="w-14 h-14 bg-ecoGreen rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 transition duration-300 animate-[bounce_2s_infinite] touch-target" aria-label="Позвонить нам">
             <i class="fa-solid fa-phone text-2xl" aria-hidden="true"></i>
@@ -186,7 +202,7 @@
     <section id="why" class="py-16 md:py-24 px-6 md:px-12 relative z-20">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-3xl md:text-5xl font-display font-black text-center mb-12 md:mb-16 uppercase" data-aos="fade-up">
-            Зачем лететь на <span class="text-transparent bg-clip-text bg-gradient-to-r from-ecoBlue to-ecoGreen">Мальдивы?</span>
+            Почему  <span class="text-transparent bg-clip-text bg-gradient-to-r from-ecoBlue to-ecoGreen">Мальдивы?</span>
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -485,29 +501,24 @@
 
         <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 auto-rows-fr md:h-[600px]">
 
-            <figure class="md:col-span-2 md:row-span-2 rounded-[30px] overflow-hidden relative group shadow-lg h-[300px] md:h-auto" data-aos="zoom-in">
-                <img src="beach_relax.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Пляжный отдых" loading="lazy">
-
-                <figcaption class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-2xl border border-white/50 flex items-center gap-3 transition-transform duration-300 group-hover:-translate-y-1">
-                    <span class="text-2xl">🍹</span>
-                    <span class="font-display font-bold text-gray-900 text-lg tracking-wide">Полный Релакс</span>
-                </figcaption>
+            <figure class="md:col-span-2 md:row-span-2 rounded-[30px] overflow-hidden relative group shadow-lg h-[400px] md:h-auto" data-aos="zoom-in">
+                <img src="jump_pov.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Прыжок в воду POV" loading="lazy">
             </figure>
 
             <figure class="md:col-span-1 md:row-span-1 rounded-[30px] overflow-hidden relative group shadow-lg h-[250px] md:h-auto" data-aos="zoom-in" data-aos-delay="100">
-                <img src="spa.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Спа процедуры" loading="lazy">
+                <img src="coconut_macro.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Свежий кокос" loading="lazy">
             </figure>
 
             <figure class="md:col-span-1 md:row-span-1 rounded-[30px] overflow-hidden relative group shadow-lg h-[250px] md:h-auto" data-aos="zoom-in" data-aos-delay="200">
-                <img src="maldives_hero.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Вид на лагуну" loading="lazy">
+                <img src="night_party.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Ночная вечеринка" loading="lazy">
             </figure>
 
             <figure class="md:col-span-2 md:row-span-1 rounded-[30px] overflow-hidden relative group shadow-lg h-[200px] md:h-auto" data-aos="zoom-in" data-aos-delay="300">
-                <img src="snorkeling.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Подводный мир" loading="lazy">
+                <img src="underwater_selfie.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Селфи под водой" loading="lazy">
 
                 <figcaption class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-2xl border border-white/50 flex items-center gap-3 transition-transform duration-300 group-hover:-translate-y-1">
-                    <span class="text-xl">🐢</span>
-                    <span class="font-display font-bold text-gray-900 text-lg tracking-wide">Живой океан</span>
+                    <span class="text-xl">🤿</span>
+                    <span class="font-display font-bold text-gray-900 text-lg tracking-wide">Погружение</span>
                 </figcaption>
             </figure>
 
@@ -818,161 +829,179 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
-        // ==============================================================
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQbokvP4yEwJQQeVeJ-y4FnEXG0Pxt0HAf_SRTKB2e5B6gULfSSRGxYa5UkQLgNLH1/exec';
-        // ==============================================================
+    // ==============================================================
+    // ✅ ИСПРАВЛЕНО: Вставлена твоя НОВАЯ рабочая ссылка
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_4skEKxqXH6XFYT_04L_fnDBJzVZVesPKF6NcYFhI73HAm0ViDVOPRUB_YLjSnuHcug/exec';
+    // ==============================================================
 
-        // --- Инициализация (AOS и Меню) ---
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof AOS !== 'undefined') AOS.init({ duration: 800, offset: 50, once: true });
-        });
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if(menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('menu-open');
-                const icon = menuBtn.querySelector('i');
-                if(icon) icon.classList.toggle('fa-xmark');
-                if(icon) icon.classList.toggle('fa-bars');
-            });
-        }
-        function closeMenu() {
-            if(mobileMenu) mobileMenu.classList.remove('menu-open');
-        }
-
-        // --- Логика переключения вкладок формы ---
-        function switchContactMethod(method) {
-            const tabCall = document.getElementById('tabCall');
-            const tabWrite = document.getElementById('tabWrite');
-            const blockCall = document.getElementById('blockCall');
-            const blockWrite = document.getElementById('blockWrite');
-            const inputMethod = document.getElementById('inputMethodType');
-
-            if (method === 'call') {
-                tabCall.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
-                tabCall.classList.remove('text-gray-400', 'hover:text-white');
-                tabWrite.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
-                tabWrite.classList.add('text-gray-400', 'hover:text-white');
-                blockCall.classList.remove('hidden');
-                blockWrite.classList.add('hidden');
-                inputMethod.value = 'phone';
-            } else {
-                tabWrite.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
-                tabWrite.classList.remove('text-gray-400', 'hover:text-white');
-                tabCall.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
-                tabCall.classList.add('text-gray-400', 'hover:text-white');
-                blockWrite.classList.remove('hidden');
-                blockCall.classList.add('hidden');
-                inputMethod.value = 'messenger';
+    // --- Инициализация (AOS и Меню) ---
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') AOS.init({ duration: 800, offset: 50, once: true });
+    });
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if(menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('menu-open');
+            const icon = menuBtn.querySelector('i');
+            if(icon) {
+                icon.classList.toggle('fa-xmark');
+                icon.classList.toggle('fa-bars');
             }
-        }
+        });
+    }
+    function closeMenu() {
+        if(mobileMenu) mobileMenu.classList.remove('menu-open');
+    }
 
-        function selectMessenger(app) {
-            document.querySelectorAll('.messenger-btn').forEach(btn => {
-                btn.classList.remove('bg-white/20', 'border-white/50', 'ring-2', 'ring-white/50');
-                btn.classList.add('bg-white/5', 'border-white/10');
-                const icon = btn.querySelector('i');
+    // --- Логика переключения вкладок формы ---
+    function switchContactMethod(method) {
+        const tabCall = document.getElementById('tabCall');
+        const tabWrite = document.getElementById('tabWrite');
+        const blockCall = document.getElementById('blockCall');
+        const blockWrite = document.getElementById('blockWrite');
+        const inputMethod = document.getElementById('inputMethodType');
+
+        // Проверка на случай, если элементов нет на странице
+        if(!tabCall) return;
+
+        if (method === 'call') {
+            tabCall.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
+            tabCall.classList.remove('text-gray-400', 'hover:text-white');
+            tabWrite.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
+            tabWrite.classList.add('text-gray-400', 'hover:text-white');
+            blockCall.classList.remove('hidden');
+            blockWrite.classList.add('hidden');
+            inputMethod.value = 'phone';
+        } else {
+            tabWrite.classList.add('bg-white', 'text-gray-900', 'shadow-lg');
+            tabWrite.classList.remove('text-gray-400', 'hover:text-white');
+            tabCall.classList.remove('bg-white', 'text-gray-900', 'shadow-lg');
+            tabCall.classList.add('text-gray-400', 'hover:text-white');
+            blockWrite.classList.remove('hidden');
+            blockCall.classList.add('hidden');
+            inputMethod.value = 'messenger';
+        }
+    }
+
+    function selectMessenger(app) {
+        document.querySelectorAll('.messenger-btn').forEach(btn => {
+            btn.classList.remove('bg-white/20', 'border-white/50', 'ring-2', 'ring-white/50');
+            btn.classList.add('bg-white/5', 'border-white/10');
+            const icon = btn.querySelector('i');
+            if(icon) {
                 icon.classList.remove('text-[#229ED9]', 'text-[#25D366]', 'text-[#7360F2]');
                 icon.classList.add('text-gray-400');
-            });
-            document.getElementById('inputMessengerApp').value = app;
-            const selectedBtn = document.getElementById('btn' + app.charAt(0).toUpperCase() + app.slice(1));
+            }
+        });
+
+        const inputApp = document.getElementById('inputMessengerApp');
+        if(inputApp) inputApp.value = app;
+
+        const selectedBtn = document.getElementById('btn' + app.charAt(0).toUpperCase() + app.slice(1));
+        if(selectedBtn) {
             selectedBtn.classList.remove('bg-white/5', 'border-white/10');
             selectedBtn.classList.add('bg-white/20', 'border-white/50');
             const icon = selectedBtn.querySelector('i');
-            icon.classList.remove('text-gray-400');
-            if(app === 'telegram') icon.classList.add('text-[#229ED9]');
-            if(app === 'whatsapp') icon.classList.add('text-[#25D366]');
-            if(app === 'viber') icon.classList.add('text-[#7360F2]');
-        }
-
-        // === ОТПРАВКА ФОРМЫ С НОВОЙ ЛОГИКОЙ ===
-        const contactForm = document.querySelector('form');
-
-        if (contactForm) {
-            // Ограничение ввода для телефона (только цифры)
-            const phoneField = contactForm.querySelector('input[name="phone"]');
-            if(phoneField) {
-                phoneField.addEventListener('input', function(e) {
-                    this.value = this.value.replace(/[^0-9+\-()\s]/g, '');
-                });
+            if(icon) {
+                icon.classList.remove('text-gray-400');
+                if(app === 'telegram') icon.classList.add('text-[#229ED9]');
+                if(app === 'whatsapp') icon.classList.add('text-[#25D366]');
+                if(app === 'viber') icon.classList.add('text-[#7360F2]');
             }
+        }
+    }
 
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+    // === ОТПРАВКА ФОРМЫ С НОВОЙ ЛОГИКОЙ ===
+    // ✅ ИСПРАВЛЕНО: Ищем форму конкретно по ID, чтобы не перепутать с другими формами
+    const contactForm = document.getElementById('contactForm');
 
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const nameInput = contactForm.querySelector('input[name="name"]');
-                const phoneInput = contactForm.querySelector('input[name="phone"]');
-
-                // Новые поля
-                const methodInput = document.getElementById('inputMethodType');
-                const messengerAppInput = document.getElementById('inputMessengerApp');
-                const messengerContactInput = contactForm.querySelector('input[name="messenger_contact"]');
-
-                let contactData = '';
-
-                // ВАЛИДАЦИЯ
-                if (methodInput.value === 'phone') {
-                    // Логика для звонка
-                    let phoneValue = phoneInput.value;
-                    let cleanPhone = phoneValue.replace(/[^0-9+]/g, '');
-                    if (cleanPhone.startsWith('80')) cleanPhone = '+375' + cleanPhone.substring(2);
-                    if (cleanPhone.startsWith('375')) cleanPhone = '+' + cleanPhone;
-
-                    if (cleanPhone.replace(/[^0-9]/g, '').length < 7) {
-                        alert('Пожалуйста, введите корректный номер телефона.');
-                        return;
-                    }
-                    contactData = cleanPhone;
-                } else {
-                    // Логика для мессенджера
-                    if (!messengerContactInput.value.trim()) {
-                        alert('Пожалуйста, укажите ваш никнейм или номер для связи.');
-                        return;
-                    }
-                    contactData = messengerContactInput.value;
-                    if(!messengerAppInput.value) messengerAppInput.value = 'telegram'; // Дефолт
-                }
-
-                // Визуальный эффект
-                const originalBtnText = submitBtn.innerText;
-                submitBtn.innerText = 'ОТПРАВЛЯЕМ...';
-                submitBtn.disabled = true;
-                submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
-
-                const formData = new FormData();
-                formData.append("name", nameInput.value);
-                formData.append("phone", contactData); // Сюда кладем основной контакт
-                formData.append("source", "ОАЭ");
-
-                // Доп поля для Google Script -> U-ON
-                formData.append("contact_method_type", methodInput.value);
-                formData.append("messenger_app", messengerAppInput.value);
-                formData.append("messenger_contact", messengerContactInput.value);
-
-                fetch(GOOGLE_SCRIPT_URL, {
-                    method: "POST",
-                    body: formData,
-                    mode: 'no-cors'
-                })
-                .then(() => {
-                    alert('Спасибо! Ваша заявка принята.');
-                    contactForm.reset();
-                    switchContactMethod('call');
-                })
-                .catch(error => {
-                    console.error('Ошибка:', error);
-                    alert('Ошибка соединения.');
-                })
-                .finally(() => {
-                    submitBtn.innerText = originalBtnText;
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
-                });
+    if (contactForm) {
+        // Ограничение ввода для телефона (только цифры)
+        const phoneField = contactForm.querySelector('input[name="phone"]');
+        if(phoneField) {
+            phoneField.addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9+\-()\s]/g, '');
             });
         }
-    </script>
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const nameInput = contactForm.querySelector('input[name="name"]');
+            const phoneInput = contactForm.querySelector('input[name="phone"]');
+
+            // Новые поля
+            const methodInput = document.getElementById('inputMethodType');
+            const messengerAppInput = document.getElementById('inputMessengerApp');
+            const messengerContactInput = contactForm.querySelector('input[name="messenger_contact"]');
+
+            let contactData = '';
+
+            // ВАЛИДАЦИЯ
+            if (methodInput.value === 'phone') {
+                // Логика для звонка
+                let phoneValue = phoneInput.value;
+                let cleanPhone = phoneValue.replace(/[^0-9+]/g, '');
+                // Умная замена кодов для Беларуси
+                if (cleanPhone.startsWith('80')) cleanPhone = '+375' + cleanPhone.substring(2);
+                if (cleanPhone.startsWith('375')) cleanPhone = '+' + cleanPhone;
+
+                if (cleanPhone.replace(/[^0-9]/g, '').length < 7) {
+                    alert('Пожалуйста, введите корректный номер телефона.');
+                    return;
+                }
+                contactData = cleanPhone;
+            } else {
+                // Логика для мессенджера
+                if (!messengerContactInput.value.trim()) {
+                    alert('Пожалуйста, укажите ваш никнейм или номер для связи.');
+                    return;
+                }
+                contactData = messengerContactInput.value;
+                if(!messengerAppInput.value) messengerAppInput.value = 'telegram'; // Дефолт
+            }
+
+            // Визуальный эффект
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'ОТПРАВЛЯЕМ...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+            const formData = new FormData();
+            formData.append("name", nameInput.value);
+            formData.append("phone", contactData);
+            formData.append("source", "ОАЭ");
+
+            // Доп поля для Google Script -> U-ON
+            formData.append("contact_method_type", methodInput.value);
+            formData.append("messenger_app", messengerAppInput.value);
+            formData.append("messenger_contact", messengerContactInput.value);
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                body: formData,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                alert('Спасибо! Ваша заявка принята. Менеджер свяжется с вами в ближайшее время.');
+                contactForm.reset();
+                switchContactMethod('call');
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                alert('Ошибка соединения. Попробуйте позвонить нам напрямую.');
+            })
+            .finally(() => {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            });
+        });
+    }
+</script>
+
 
 </body>
 </html>
